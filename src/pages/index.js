@@ -1,9 +1,9 @@
 import React from "react"
-import { Link, useStaticQuery } from "gatsby"
+import { useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import Collection from "../components/collection/collection"
 
 const IndexPage = () => {
   const data = useStaticQuery(
@@ -22,16 +22,12 @@ const IndexPage = () => {
       }
     `
   )
-  const asset = data.allContentfulAsset.edges[0].node
-  console.log(asset.fluid)
-
 
   return (
     <Layout>
       <SEO title="Home" />
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <h2>{asset.title}</h2>
-        <Image fluid={asset.fluid} alt={asset.title} />
+      <div style={{ marginBottom: `1.45rem` }}>
+        <Collection />
       </div>
     </Layout>
   )
