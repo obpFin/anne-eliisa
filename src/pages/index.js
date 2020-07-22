@@ -1,27 +1,10 @@
 import React from "react"
-import { useStaticQuery } from "gatsby"
 
-import Layout from "../components/layout"
+import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Collection from "../components/collection/collection"
 
 const IndexPage = () => {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        allContentfulAsset {
-          edges {
-            node {
-              title
-              fluid(maxWidth: 800) {
-                ...GatsbyContentfulFluid
-              }
-            }
-          }
-        }
-      }
-    `
-  )
 
   return (
     <Layout>

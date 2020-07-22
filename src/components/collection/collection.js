@@ -8,13 +8,15 @@ const Collection = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        allContentfulAsset {
+        allContentfulTaulu {
           edges {
             node {
               id
               title
-              fluid(maxWidth: 800) {
-                ...GatsbyContentfulFluid
+              main {
+                fluid(maxWidth: 800) {
+                  ...GatsbyContentfulFluid
+                }
               }
             }
           }
@@ -22,13 +24,11 @@ const Collection = () => {
       }
     `
   )
-  const edges = data.allContentfulAsset.edges
+  const edges = data.allContentfulTaulu.edges
 
   return (
     <div className="collection">
-    {edges.map(({node}) => node && (
-      <Painting {...node} key={node.id} />
-    ))}
+      {edges.map(({ node }) => node && <Painting {...node} key={node.id} />)}
     </div>
   )
 }

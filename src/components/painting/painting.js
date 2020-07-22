@@ -3,7 +3,7 @@ import Image from "../image"
 
 const Painting = node => (
   <div className="painting">
-    {node && <Image fluid={node.fluid} alt={node.title} />}
+    {node && <Image fluid={node.main.fluid} alt={node.title} />}
   </div>
 )
 
