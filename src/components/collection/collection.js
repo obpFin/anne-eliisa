@@ -8,11 +8,13 @@ const Collection = () => {
   const data = useStaticQuery(
     graphql`
       query {
+        # allContentfulTaulu(sort: {fields: vaakataso, order: DESC}) {
         allContentfulTaulu {
           edges {
             node {
               id
               title
+              vaakataso
               main {
                 fluid(maxWidth: 800) {
                   ...GatsbyContentfulFluid
