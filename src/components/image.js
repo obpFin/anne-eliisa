@@ -12,9 +12,9 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = ({fluid, alt, isHorizontal}) => (
+const Image = ({fluid, alt }) => (
 
-  <Img fluid={fluid} alt={alt} className={isHorizontal ? "horizontal" : "vertical"} />
+  <Img fluid={fluid} alt={alt} />
 )
 
 export default Image

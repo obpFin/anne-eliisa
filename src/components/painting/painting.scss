@@ -1,6 +1,15 @@
 $height: 520px;
 
 .painting {
+  &.horizontal {
+    > div {
+      // max-height: $height / 2 - 16px;
+
+      // img {
+      //   max-height: $height / 2 - 16px;
+      // }
+    }
+  }
   .gatsby-image-wrapper {
     min-height: 300px;
     max-height: $height;
@@ -10,13 +19,6 @@ $height: 520px;
       height: 100%;
       max-height: $height;
       object-fit: cover;
-    }
-  }
-  .horizontal {
-    max-height: $height / 2 - 16px;
-
-    img {
-      max-height: $height / 2 - 16px;
     }
   }
 }
