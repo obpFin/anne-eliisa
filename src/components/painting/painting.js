@@ -5,7 +5,7 @@ import "./painting.scss"
 
 const Painting = node => (
   <div className={`painting ${node.vaakataso && "horizontal"}`}>
-    {node && <Image fluid={node.main.fluid} alt={node.title} alt={node.title} />}
+    {node && <Image fluid={node.main.fluid} alt={node.title} />}
   </div>
 )
 
