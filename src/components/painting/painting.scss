@@ -1,9 +1,9 @@
-$height: 520px;
+$height: 375px;
 
 .painting {
   &.horizontal {
     > div {
-      // max-height: $height / 2 - 16px;
+      max-height: $height / 2 - 16px;
 
       // img {
       //   max-height: $height / 2 - 16px;
