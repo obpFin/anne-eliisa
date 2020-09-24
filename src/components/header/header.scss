@@ -5,6 +5,7 @@ header {
   padding: 13px 0;
   text-align: center;
   .title {
+    display: inline-block;
     font-family: "Dancing Script", cursive;
     margin: 0;
   }
@@ -34,4 +35,24 @@ header {
       color-stop(100%, #fff)
     );
   }
+
+  .nav {
+    display: block;
+    justify-content: center;
+    
+    .menu {
+      display: inline-block;
+      float: right;
+      text-transform: uppercase;
+      text-align: left;
+      font-size: 14px;
+    }
+    
+    a {
+      letter-spacing: 1px;
+      font-weight: 200;
+      display: block;
+    }
+  }
+
 }
