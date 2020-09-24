@@ -8,17 +8,20 @@ const Header = ({ siteTitle }) => (
   <header>
     <div
       style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        margin: `0 1.45rem`,
+        // maxWidth: 960,
+        padding: `1.45rem 0`,
       }}
     >
-      <h1 className="title">
-        <Link
-          to="/">
-          {siteTitle}
-        </Link>
-      </h1>
+      <div className="nav">
+        <h1 className="title">
+          <Link to="/">{siteTitle}</Link>
+        </h1>
+        <div className="menu">
+          <Link to="/collections">kokoelmat</Link>
+          <Link to="/bio">bio</Link>
+        </div>
+      </div>
     </div>
   </header>
 )
