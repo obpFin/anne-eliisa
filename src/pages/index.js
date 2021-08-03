@@ -4,8 +4,9 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Collection from "../components/collection/collection"
 
-const IndexPage = () => {
+import "bootstrap/dist/css/bootstrap.min.css"
 
+const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
