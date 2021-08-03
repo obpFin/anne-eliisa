@@ -1,6 +1,8 @@
 $height: 375px;
 
 .painting {
+  overflow: hidden;
+
   &.horizontal {
     > div {
       max-height: $height / 2 - 16px;
@@ -9,6 +11,10 @@ $height: 375px;
       //   max-height: $height / 2 - 16px;
       // }
     }
+  }
+  &.focus {
+    max-height: initial;
+    z-index: 9999;
   }
   .gatsby-image-wrapper {
     min-height: 300px;

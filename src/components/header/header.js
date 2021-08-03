@@ -14,7 +14,7 @@ const Header = ({ siteTitle }) => (
       }}
     >
       <div className="nav">
-        <h1 className="title">
+        <h1 className="title text-4xl">
           <Link to="/">{siteTitle}</Link>
         </h1>
         <div className="menu">
