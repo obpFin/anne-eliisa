@@ -12,9 +12,6 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = ({fluid, alt }) => (
-
-  <Img fluid={fluid} alt={alt} />
-)
+const Image = ({ fluid, alt }) => <Img fluid={fluid} alt={alt} />
 
 export default Image

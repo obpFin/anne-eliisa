@@ -1,8 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery } from "gatsby"
 
-import "./collection.scss"
+import Modal from "react-bootstrap/Modal"
+
 import Painting from "../painting/painting"
+import "./collection.scss"
+// import Modal from "../Modal/Modal"
 
 const Collection = () => {
   const data = useStaticQuery(
@@ -28,11 +31,64 @@ const Collection = () => {
   )
   const edges = data.allContentfulTaulu.edges
 
+  const [modalVisible, setModalVisible] = useState(false)
+  const [selectedPainting, selectPainting] = useState(null)
+
+  const onClickPainting = painting => {
+    selectPainting(painting)
+    setModalVisible(true)
+  }
+
+  const renderModal = () => {
+    if (!selectedPainting) return
+
+    return (
+      <Modal show={modalVisible} onHide={() => setModalVisible(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>{selectedPainting.title}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Painting {...selectedPainting} key={selectedPainting.id} />
+        </Modal.Body>
+        <Modal.Footer></Modal.Footer>
+      </Modal>
+    )
+  }
+
+  //   return (
+  //     <>
+  //       <div className="collection">
+  //         {edges.map(
+  //           ({ node }) =>
+  //             node && (
+  //               <Painting
+  //                 {...node}
+  //                 key={node.id}
+  //                 setModalVisible={setModalVisible}
+  //               />
+  //             )
+  //         )}
+  //       </div>
+  //       {modalVisible && <Modal />}
+  //     </>
+  //   )
+  // }
   return (
-    <div className="collection">
-      {edges.map(({ node }) => node && <Painting {...node} key={node.id} />)}
-    </div>
+    <>
+      <div className="collection">
+        {edges.map(
+          ({ node }) =>
+            node && (
+              <Painting
+                {...node}
+                key={node.id}
+                onClickPainting={onClickPainting}
+              />
+            )
+        )}
+      </div>
+      {renderModal()}
+    </>
   )
 }
-
 export default Collection
