@@ -1,11 +1,23 @@
+$text-color: black;
+
+footer {
+  font-size: 14px;
+}
+
+
+html a {
+  color: black;
+  text-decoration: none;
+  &:hover {
+    color: lighten($text-color, 40)
+  }
+
+}
+
 .content {
   margin: 4rem auto;
   max-width: 1440px;
   padding: 0 1.0875rem 1.45rem;
-}
-
-footer {
-  font-size: 14px;
 }
 
 .scale-in {

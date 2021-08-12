@@ -39,7 +39,11 @@ header {
   .nav {
     display: block;
     justify-content: center;
-    
+
+    .title > a:hover {
+      color: initial;
+    }
+
     .menu {
       display: inline-block;
       float: right;
@@ -47,7 +51,7 @@ header {
       text-align: left;
       font-size: 14px;
     }
-    
+
     a {
       letter-spacing: 1px;
       font-weight: 200;
