@@ -16,6 +16,13 @@ $height: 375px;
     max-height: initial;
     z-index: 9999;
   }
+  &.original > .gatsby-image-wrapper {
+    min-height: initial;
+    max-height: initial;
+    img {
+      max-height: 50vw;
+    }
+  }
   .gatsby-image-wrapper {
     min-height: 300px;
     max-height: $height;

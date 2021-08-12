@@ -43,36 +43,23 @@ const Collection = () => {
     if (!selectedPainting) return
 
     return (
-      <Modal show={modalVisible} onHide={() => setModalVisible(false)}>
+      <Modal
+        show={modalVisible}
+        onHide={() => setModalVisible(false)}
+        dialogClassName="painting-modal"
+        centered
+      >
         <Modal.Header closeButton>
           <Modal.Title>{selectedPainting.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Painting {...selectedPainting} key={selectedPainting.id} />
+          <Painting {...selectedPainting} original key={selectedPainting.id} />
         </Modal.Body>
         <Modal.Footer></Modal.Footer>
       </Modal>
     )
   }
 
-  //   return (
-  //     <>
-  //       <div className="collection">
-  //         {edges.map(
-  //           ({ node }) =>
-  //             node && (
-  //               <Painting
-  //                 {...node}
-  //                 key={node.id}
-  //                 setModalVisible={setModalVisible}
-  //               />
-  //             )
-  //         )}
-  //       </div>
-  //       {modalVisible && <Modal />}
-  //     </>
-  //   )
-  // }
   return (
     <>
       <div className="collection">
