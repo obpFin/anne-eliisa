@@ -5,8 +5,8 @@ import "./painting.scss"
 
 const Painting = ({ onClickPainting, original, ...node }) => (
   <div
-    className={`painting group ${node.vaakataso && "horizontal"} ${
-      original && "original"
+    className={`painting group ${node.vaakataso ? "horizontal" : ""} ${
+      original ? "original" : ""
     }`}
     onClick={() => onClickPainting && onClickPainting(node)}
   >

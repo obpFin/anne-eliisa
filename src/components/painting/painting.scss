@@ -2,6 +2,9 @@ $height: 375px;
 
 .painting {
   overflow: hidden;
+  &:hover {
+    cursor: pointer;
+  }
 
   &.horizontal {
     > div {
@@ -33,5 +36,9 @@ $height: 375px;
       max-height: $height;
       object-fit: cover;
     }
+  }
+
+  .gatsby-image-wrapper > div {
+    padding-bottom: 100%!important;
   }
 }
