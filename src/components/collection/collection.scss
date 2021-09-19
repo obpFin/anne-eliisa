@@ -14,3 +14,12 @@
     // grid-row: span 2;
   }
 }
+
+.modal-header {
+  align-items: baseline;
+  justify-content: center;
+
+  span {
+    margin: 0 auto;
+  }
+}

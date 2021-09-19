@@ -17,9 +17,11 @@ const Collection = () => {
             node {
               id
               title
+              description
+              vuosi
               vaakataso
               main {
-                fluid(maxWidth: 800) {
+                fluid {
                   ...GatsbyContentfulFluid
                 }
               }
@@ -51,8 +53,10 @@ const Collection = () => {
       >
         <Modal.Header closeButton>
           <Modal.Title>{selectedPainting.title}</Modal.Title>
+          <span>{selectedPainting.vuosi}</span>
         </Modal.Header>
         <Modal.Body>
+          <span>{selectedPainting.description}</span>
           <Painting {...selectedPainting} original key={selectedPainting.id} />
         </Modal.Body>
         <Modal.Footer></Modal.Footer>
