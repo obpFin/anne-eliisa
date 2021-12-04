@@ -1,4 +1,4 @@
-$height: 375px;
+$height: 420px;
 
 .painting {
   overflow: hidden;
@@ -6,15 +6,8 @@ $height: 375px;
     cursor: pointer;
   }
 
-  &.horizontal {
-    > div {
-      max-height: $height / 2 - 16px;
-
-      // img {
-      //   max-height: $height / 2 - 16px;
-      // }
-    }
-  }
+  // &.horizontal {
+  // }
   &.focus {
     max-height: initial;
     z-index: 9999;
